@@ -10,7 +10,7 @@ var mwsProd = require('../'),
 
 describe('mws-product', function() {
 
-  var auth     = {sellerId: 'SELLERID', accessKeyId: 'ACCESSKEYID', secretKey: 'SECRETKEY'},
+  var auth     = {sellerId: process.env['SELLER_ID'], accessKeyId: process.env['AWS_ACCESS_KEY_ID'], secretKey: process.env['SECRET_KEY']},
       mplace   = 'US', // marketplace
       app,     // mwsProd instance
       authjson = utilex.tidyArgs()['auth-json'];
